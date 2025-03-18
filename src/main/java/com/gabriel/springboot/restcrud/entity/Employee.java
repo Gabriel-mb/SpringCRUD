@@ -1,48 +1,48 @@
-package com.gabriel.SpringCRUD.entity;
+package com.gabriel.springboot.restcrud.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name="employee")
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public Integer id;
+    @Column(name="id")
+    private int id;
 
-    @Column(name = "first_name")
-    public String firstName;
+    @Column(name="first_Name")
+    private String fisrtName;
 
-    @Column(name = "last_name")
-    public String lastName;
+    @Column(name="last_Name")
+    private String lastName;
 
-    @Column(name = "email")
-    public String email;
+    @Column(name="email")
+    private String email;
 
-    public Student() {
+    public Employee() {
     }
 
-    public Student(String firstName, String lastName, String email) {
-        this.firstName = firstName;
+    public Employee(String fisrtName, String lastName, String email) {
+        this.fisrtName = fisrtName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFisrtName() {
+        return fisrtName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFisrtName(String fisrtName) {
+        this.fisrtName = fisrtName;
     }
 
     public String getLastName() {
@@ -63,9 +63,9 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Employee{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
+                ", fisrtName='" + fisrtName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 '}';
